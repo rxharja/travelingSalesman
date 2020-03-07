@@ -12,13 +12,19 @@ let fitness = [];
 let generations = 0;
 let noImprovementCount = 0;
 
-
 var interactiveSketch = function(sketch) {
+  var slider1 = document.getElementById("myRange1");
+  var output1 = document.getElementById("slider-value1");
+  output1.innerHTML = slider1.value; // Display the default slider value
+  var slider2 = document.getElementById("myRange2");
+  var output2 = document.getElementById("slider-value2");
+  output2.innerHTML = slider2.value; // Display the default slider value
+
   let started = false;
   let cities = [];
   let order = [];
-  let totalCities = 10;
-  let popSize = 5000;
+  let totalCities = slider2.value;
+  let popSize = slider1.value;
   let count = 0;
   let population = [];
   let fitness = [];
@@ -26,6 +32,13 @@ var interactiveSketch = function(sketch) {
   let bestEver = order;
   let recordDistance = Infinity
 
+  // Update the current slider value (each time you drag the slider handle)
+  slider1.oninput = function() {
+    output1.innerHTML = this.value;
+  }
+  slider2.oninput = function() {
+    output2.innerHTML = this.value;
+  }
   sketch.setup = function(){
     var canvasDiv = document.getElementById('fourth-sketch-container');
     var width = canvasDiv.offsetWidth;
@@ -82,6 +95,8 @@ var interactiveSketch = function(sketch) {
     bestEver = null;
     currentBest = null;
     generations = 0;
+    totalCities = slider2.value;
+    popSize = slider1.value;
     sketch.noLoop();
   }
 
@@ -98,7 +113,7 @@ var interactiveSketch = function(sketch) {
         sketch.ellipse(cities[i].x, cities[i].y,8,8);
       }
 
-      sketch.stroke(255,0,255);
+      sketch.stroke("#70C1B3");
       sketch.strokeWeight(4);
       sketch.beginShape();
       sketch.noFill();

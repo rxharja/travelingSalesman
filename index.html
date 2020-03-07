@@ -34,6 +34,16 @@
     </div>
     <div class="card" id="interactive">
       <h1>Try your own!</h1>
+      <div id="sliders">
+        <div class="slidecontainer">
+          <p>Population Size: <span id="slider-value1"></span></p>
+          <input type="range" min="5" max="5000" value="100" class="slider slider1" id="myRange1">
+        </div>
+        <div class="slidecontainer">
+          <p>Random City Size: <span id="slider-value2"></span></p>
+          <input type="range" min="3" max="25" value="10" class="slider slider2" id="myRange2">
+        </div>
+      </div>
       <div id ="buttons">
           <a onclick="interactive.start()"><span>Run</span></a>
           <a onclick="interactive.reset()"><span>Reset</span></a>

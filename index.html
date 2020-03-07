@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <div class="card" id="title-container">
+      <h1 id="title">The Traveling Salesman</h1>
+      <h3 id="subtitle">Three Approaches</h3>
+    </div>
+    <br>
+    <div id="container">
+      <div class="text-box card">
+        <div id="first-sketch-container"></div>
+        <h1>Random</h1>
+        <!-- <p>Random configurations are tried until something happens</p> -->
+      </div>
+      <div class="text-box card">
+        <div id="second-sketch-container"></div>
+        <h1>Lexicographic</h1>
+        <!-- <p>All possibilities are ordered and visited one after another</p> -->
+      </div>
+      <div class="text-box card">
+        <div id="third-sketch-container"></div>
+        <h1>Genetic</h1>
+        <!-- <p>Uses a genetic approach to heuristically solve for the shortest path</p> -->
+      </div>
+    </div>
+    <div class="card" id="interactive">
+      <h1>Try your own!</h1>
+      <div id ="buttons">
+          <a onclick="interactive.start()"><span>Run</span></a>
+          <a onclick="interactive.reset()"><span>Reset</span></a>
+          <a onclick="interactive.randomCities()"><span>Random</span></a>
+      </div>
+      <div id="fourth-sketch-container"></div>
+    </div>
+    <script src="sketch.js"></script>
+    <script src="random.js"></script>
+    <script src="lexico.js"></script>
+    <script src="ga.js"></script>
+  </body>
+</html>

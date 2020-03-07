@@ -17,24 +17,24 @@
     </div>
     <br>
     <div id="container">
-      <div class="text-box card">
+      <div class="text-box card" id="random-box">
         <div id="first-sketch-container"></div>
         <a><span>Random</span></a>
         <p>Random configurations are tried, by shuffling around the cities. The best is displayed in blue.</p>
       </div>
-      <div class="text-box card">
+      <div class="text-box card"  id="lexico-box">
         <div id="second-sketch-container"></div>
         <a><span>Lexicographic</span></a>
         <p>All possibilities are ordered lexicgraphically and visited one after another. Computationally expensive to see every single possibility for larger numbers of cities. The best is displayed in yellow</p>
       </div>
-      <div class="text-box card">
+      <div class="text-box card" id="genetic-box">
         <div id="third-sketch-container"></div>
         <a><span>Genetic</span></a>
         <p>Uses a genetic algorithm approach to heuristically solve for the shortest path. The best is displayed in red and the best of that generation is displayed in white.</p>
       </div>
     </div>
     <div class="card" id="interactive">
-      <h1>Try your own!</h1>
+      <h1>Try your own using the genetic algorithm!</h1>
       <p>Click on the canvas to drop a city on the map. When you're satisfied with the number of cities and locations, click run. Otherwise hit reset to start over. If you can't be bothered, simply hit random to generate a random configuration. Make sure to mess around with the sliders!</p>
       <br>
       <hr>

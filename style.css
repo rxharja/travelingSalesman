@@ -16,8 +16,9 @@ body {
   margin: 0 auto;
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .card {
@@ -29,6 +30,8 @@ body {
 .text-box {
   text-align: center;
   flex: 0 0 25em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
  .text-box h1 {

@@ -13,27 +13,31 @@
     <div class="card" id="title-container">
       <h1 id="title">The Traveling Salesman</h1>
       <h3 id="subtitle">Three Approaches</h3>
+      <p>A salesman must visit these ten cities on our black map. He needs the shortest possible route. It's obvious which approach generates the best solution.</p>
     </div>
     <br>
     <div id="container">
       <div class="text-box card">
         <div id="first-sketch-container"></div>
-        <h1>Random</h1>
-        <!-- <p>Random configurations are tried until something happens</p> -->
+        <a><span>Random</span></a>
+        <p>Random configurations are tried, by shuffling around the cities. The best is displayed in blue.</p>
       </div>
       <div class="text-box card">
         <div id="second-sketch-container"></div>
-        <h1>Lexicographic</h1>
-        <!-- <p>All possibilities are ordered and visited one after another</p> -->
+        <a><span>Lexicographic</span></a>
+        <p>All possibilities are ordered lexicgraphically and visited one after another. Computationally expensive to see every single possibility for larger numbers of cities. The best is displayed in yellow</p>
       </div>
       <div class="text-box card">
         <div id="third-sketch-container"></div>
-        <h1>Genetic</h1>
-        <!-- <p>Uses a genetic approach to heuristically solve for the shortest path</p> -->
+        <a><span>Genetic</span></a>
+        <p>Uses a genetic algorithm approach to heuristically solve for the shortest path. The best is displayed in red and the best of that generation is displayed in white.</p>
       </div>
     </div>
     <div class="card" id="interactive">
       <h1>Try your own!</h1>
+      <p>Click on the canvas to drop a city on the map. When you're satisfied with the number of cities and locations, click run. Otherwise hit reset to start over. If you can't be bothered, simply hit random to generate a random configuration. Make sure to mess around with the sliders!</p>
+      <br>
+      <hr>
       <div id="sliders">
         <div class="slidecontainer">
           <p>Population Size: <span id="slider-value1"></span></p>
@@ -45,9 +49,9 @@
         </div>
       </div>
       <div id ="buttons">
-          <a onclick="interactive.start()"><span>Run</span></a>
-          <a onclick="interactive.reset()"><span>Reset</span></a>
-          <a onclick="interactive.randomCities()"><span>Random</span></a>
+          <a onclick="interactive.start()" class="but"><span>Run</span></a>
+          <a onclick="interactive.reset()" class="but"><span>Reset</span></a>
+          <a onclick="interactive.randomCities()" class="but"><span>Random</span></a>
       </div>
       <div id="fourth-sketch-container"></div>
     </div>

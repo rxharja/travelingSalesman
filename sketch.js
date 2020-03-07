@@ -42,7 +42,7 @@ var interactiveSketch = function(sketch) {
   sketch.setup = function(){
     var canvasDiv = document.getElementById('fourth-sketch-container');
     var width = canvasDiv.offsetWidth;
-    var sketchCanvas = sketch.createCanvas(width,450);
+    var sketchCanvas = sketch.createCanvas(width,600);
     sketchCanvas.parent("interactive");
     sketch.background(0);
     sketch.noLoop();
